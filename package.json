@@ -3,14 +3,14 @@
   "sideEffects": false,
   "version": "0.0.1",
   "description": "Detect whether a terminal supports color. Zero dependency and supports ESM and CJS.",
-  "main": "cjs/index.js",
-  "module": "es/index.js",
+  "main": "cjs/node.js",
+  "module": "esm/node.js",
   "exports": {
     "node": {
       "import": "./esm/node.js",
       "default": "./cjs/node.js"
     },
-    "browser": {
+    "default": {
       "import": "./esm/browser.js",
       "default": "./cjs/browser.js"
     }
