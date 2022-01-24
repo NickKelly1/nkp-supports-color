@@ -4,10 +4,13 @@
 [![deploy status](https://github.com/nickkelly1/supports-color/actions/workflows/release.yml/badge.svg)](https://github.com/nickkelly1/supports-color/actions/workflows/release.yml)
 [![known vulnerabilities](https://snyk.io/test/github/nickkelly1/supports-color/badge.svg)](https://snyk.io/test/github/nickkelly1/supports-color)
 
-Detect whether a terminal supports color. Zero dependency and supports ESM and CJS.
+Detect whether a terminal supports color.
+
+Fork of [`supports-color`](https://github.com/chalk/supports-color) with support for both ESM and CommonJS.
 
 ## Table of contents
 
+- [Fork](#fork)
 - [Installation](#installation)
   - [npm](#npm)
   - [yarn](#yarn)
