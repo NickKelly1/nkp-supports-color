@@ -1,21 +1,31 @@
 {
-  "name": "---NPM-PACKAGE-IDENTIFIER---",
+  "name": "@nkp/supports-color",
   "sideEffects": false,
   "version": "0.0.0",
-  "description": "---PACKAGE-DESCRIPTION---",
+  "description": "Detect whether a terminal supports color. Zero dependency and supports ESM and CJS.",
   "main": "cjs/index.js",
   "module": "es/index.js",
+  "exports": {
+    "node": {
+      "import": "./esm/node.js",
+      "default": "./cjs/node.js"
+    },
+    "browser": {
+      "import": "./esm/browser.js",
+      "default": "./cjs/browser.js"
+    }
+  },
   "author": "Nick Kelly",
-  "homepage": "---GITHUB-URL---#readme",
-  "readme": "---GITHUB-URL---#readme",
+  "homepage": "https://github.com/nickkelly1/nkp-supports-color.git#readme",
+  "readme": "https://github.com/nickkelly1/nkp-supports-color.git#readme",
   "license": "MIT",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "---GITHUB-URL---"
+    "url": "https://github.com/nickkelly1/nkp-supports-color.git"
   },
   "bugs": {
-    "url": "---GITHUB-URL---/issues"
+    "url": "https://github.com/nickkelly1/nkp-supports-color.git/issues"
   },
   "keywords": [
     "TypeScript",
@@ -25,8 +35,11 @@
     "test": "jest -c config/jest.config.ts",
     "test:coverage": "jest -c config/jest.config.ts --coverage",
     "test:watch": "jest -c config/jest.config.ts --watch",
-    "build": "rimraf dist && rollup -c config/rollup.config.js",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --project config/tsconfig.cjs.json",
+    "build:esm": "tsc --project config/tsconfig.esm.json",
     "publish:prepare": "cp package.json dist && cp LICENSE dist && cp README.md dist",
+    "clean": "rimraf dist",
     "lint": "eslint . --ext '*/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "eslint . --ext '*/**/*.{js,jsx,ts,tsx}' --fix"
   },

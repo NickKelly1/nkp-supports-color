@@ -1,9 +1,7 @@
 # Changelog
 
-## 0.0.1 - 202x-xx-xx
+## 0.0.1 - 2022-01-23
 
 ### Added
 
-### Changed
-
-### Removed
+- Forked & rewrote

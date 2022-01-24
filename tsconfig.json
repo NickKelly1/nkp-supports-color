@@ -1,17 +1,10 @@
 {
-  // Most ts-node options can be specified here using their programmatic names.
+  "exclude": ["node_modules", "dist"],
   "ts-node": {
-    // It is faster to skip typechecking.
-    // Remove if you want ts-node to do typechecking.
     "transpileOnly": true,
-
     "files": true,
-
     "compilerOptions": {
       "module": "commonjs",
-      // compilerOptions specified here will override those declared below,
-      // but *only* in ts-node.  Useful if you want ts-node and tsc to use
-      // different options with a single tsconfig.json.
     }
   },
   "compilerOptions": {
@@ -38,5 +31,4 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
   },
-  "exclude": ["node_modules", "dist"],
 }
