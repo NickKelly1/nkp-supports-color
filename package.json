@@ -1,7 +1,7 @@
 {
   "name": "@nkp/supports-color",
   "sideEffects": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Detect whether a terminal supports color. Zero dependency and supports ESM and CJS.",
   "main": "cjs/index.js",
   "module": "es/index.js",
