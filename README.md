@@ -10,14 +10,18 @@ Fork of [`supports-color`](https://github.com/chalk/supports-color) with support
 
 ## Table of contents
 
+- [Exports](#exports)
 - [Fork](#fork)
 - [Installation](#installation)
   - [npm](#npm)
   - [yarn](#yarn)
   - [pnpm](#pnpm)
-  - [Exports](#exports)
 - [Usage](#usage)
-- [Updating Dependencies](#updating-dependencies)
+- [publishing](#publishing)
+
+## Exports
+
+`@nkp/supports-color` exports both CommonJS and ES modules.
 
 ## Fork
 
@@ -51,34 +55,6 @@ yarn add @nkp/supports-color
 
 ```sh
 pnpm add @nkp/supports-color
-```
-
-### Exports
-
-`@nkp/supports-color` targets CommonJS and ES modules. To utilise ES modules consider using a bundler or setting `package.json#module` to `module`.
-
-## Updating dependencies
-
-To update dependencies run one of
-
-```sh
-# if npm
-# update package.json
-npx npm-check-updates -u
-# install
-npm install
-
-# if yarn
-# update package.json
-yarn create npm-check-updates -u
-# install
-yarn
-
-# if pnpm
-# update package.json
-pnpx npm-check-updates -u
-# install
-pnpm install
 ```
 
 ## Publishing

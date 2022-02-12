@@ -1,4 +1,3 @@
-import colorSupportFactoryNode from './node.factory';
+import { createNodeSupportsColor } from './node.create';
 
-const colorSupport = colorSupportFactoryNode();
-export default colorSupport;
+export default createNodeSupportsColor();

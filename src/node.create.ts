@@ -4,7 +4,8 @@ import process from 'process';
 import os from 'os';
 import { ColorSupport } from './types';
 
-function colorSupportFactoryNode(): SupportsColor {
+// require factory function for testing
+export function createNodeSupportsColor(): SupportsColor {
   // From: https://github.com/sindresorhus/has-flag/blob/main/index.js
   function hasFlag(flag: string, argv = process.argv) {
     const prefix = flag.startsWith('-') ? '' : (flag.length === 1 ? '-' : '--');
@@ -184,11 +185,8 @@ function colorSupportFactoryNode(): SupportsColor {
     return translateLevel(level);
   } as SupportsColor;
 
-
   supportsColor.stdout = supportsColor({ isTTY: tty.isatty(1), });
   supportsColor.stderr = supportsColor({ isTTY: tty.isatty(2), });
 
   return supportsColor;
 }
-
-export default colorSupportFactoryNode;

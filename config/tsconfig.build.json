@@ -1,20 +1,22 @@
 {
   "extends": "../tsconfig.json",
+  "include": [
+    "../src/**/*",
+  ],
   "exclude": [
     "../**/*.spec.ts",
     "../**/*.test.ts",
     "../**/*.spec.util.ts",
     "../**/*.test.util.ts",
-    "../dist",
     "../tests",
-  ],
-  "include": [
-    "../src/*",
-    "../src/**/*",
   ],
   "compilerOptions": {
     "outDir": "../dist",
     "rootDir": "../src",
-    "noEmit": false,
+    "noEmit": true,
+    "sourceMap": false,
+    "declaration": false,
+    "declarationMap": false,
+    "removeComments": true,
   }
 }
